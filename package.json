@@ -1,5 +1,5 @@
 {
-  "name": "eth-hd-keyring",
+  "name": "eth-brave-keyring",
   "version": "2.0.0",
   "description": "A simple standard interface for a seed phrase generated set of Ethereum accounts.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/MetaMask/eth-hd-keyring.git"
+    "url": "git+ssh://git@github.com/MetaMask/eth-brave-keyring.git"
   },
   "keywords": [
     "ethereum",
@@ -17,9 +17,9 @@
   "author": "Dan Finlay",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MetaMask/eth-hd-keyring/issues"
+    "url": "https://github.com/MetaMask/eth-brave-keyring/issues"
   },
-  "homepage": "https://github.com/MetaMask/eth-hd-keyring#readme",
+  "homepage": "https://github.com/MetaMask/eth-brave-keyring#readme",
   "dependencies": {
     "bip39": "^2.2.0",
     "eth-sig-util": "^2.0.1",

@@ -6,9 +6,9 @@ const sigUtil = require('eth-sig-util')
 
 // Options:
 const hdPathString = `m/44'/60'/0'/0`
-const type = 'HD Key Tree'
+const type = 'Brave Wallet'
 
-class HdKeyring extends EventEmitter {
+class BraveKeyring extends EventEmitter {
 
   /* PUBLIC METHODS */
 
@@ -142,5 +142,5 @@ class HdKeyring extends EventEmitter {
   }
 }
 
-HdKeyring.type = type
-module.exports = HdKeyring
+BraveKeyring.type = type
+module.exports = BraveKeyring
