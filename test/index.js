@@ -1,6 +1,6 @@
 const assert = require('assert')
 const extend = require('xtend')
-const HdKeyring = require('../')
+const BraveKeyring = require('../')
 const sigUtil = require('eth-sig-util')
 
 // Sample account:
@@ -10,16 +10,16 @@ const sampleMnemonic = 'finish oppose decorate face calm tragic certain desk hou
 const firstAcct = '0x1c96099350f13d558464ec79b9be4445aa0ef579'
 const secondAcct = '0x1b00aed43a693f3a957f9feb5cc08afa031e37a0'
 
-describe('hd-keyring', function() {
+describe('brave-keyring', function() {
 
   let keyring
   beforeEach(function() {
-    keyring = new HdKeyring()
+    keyring = new BraveKeyring()
   })
 
   describe('constructor', function(done) {
     it('constructs', function (done) {
-      keyring = new HdKeyring({
+      keyring = new BraveKeyring({
         mnemonic: sampleMnemonic,
         numberOfAccounts: 2,
       })
@@ -35,7 +35,7 @@ describe('hd-keyring', function() {
 
   describe('Keyring.type', function() {
     it('is a class property that returns the type string.', function() {
-      const type = HdKeyring.type
+      const type = BraveKeyring.type
       assert.equal(typeof type, 'string')
     })
   })
@@ -43,7 +43,7 @@ describe('hd-keyring', function() {
   describe('#type', function() {
     it('returns the correct value', function() {
       const type = keyring.type
-      const correct = HdKeyring.type
+      const correct = BraveKeyring.type
       assert.equal(type, correct)
     })
   })
@@ -242,14 +242,14 @@ describe('hd-keyring', function() {
 
       for (let i = 0; i < 1e3; i++) {
 
-        keyring = new HdKeyring({
+        keyring = new BraveKeyring({
           numberOfAccounts: 1,
         })
         const originalAccounts = await keyring.getAccounts()
         const serialized = await keyring.serialize()
         const mnemonic = serialized.mnemonic
 
-        keyring = new HdKeyring({
+        keyring = new BraveKeyring({
           numberOfAccounts: 1,
           mnemonic,
         })
